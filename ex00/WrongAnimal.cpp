@@ -1,53 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrakman <rrakman@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/25 16:47:50 by rrakman           #+#    #+#             */
-/*   Updated: 2024/04/27 17:43:51 by rrakman          ###   ########.fr       */
+/*   Created: 2024/04/27 18:45:07 by rrakman           #+#    #+#             */
+/*   Updated: 2024/04/27 18:47:02 by rrakman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"Animal.hpp"
+#include"WrongAnimal.hpp"
 
-Animal::Animal() : type("Animal")
+WrongAnimal::WrongAnimal() : type("WrongAnimal")
 {
     std::cout<<"Default "<< type <<" Constructed"<<std::endl;
 }
 
-Animal::Animal(std::string type) : type(type)
+WrongAnimal::WrongAnimal(std::string type) : type(type)
 {
-    std::cout<<"Animal "<<type<<" Constructed"<<std::endl;
+    std::cout<<"WrongAnimal "<<type<<" Constructed"<<std::endl;
 }
 
-Animal::~Animal()
+WrongAnimal::~WrongAnimal()
 {
-    std::cout<<"Default Animal Desctructor Called"<<std::endl;
+    std::cout<<"Default WrongAnimal Desctructor Called"<<std::endl;
 }
 
-Animal::Animal(const Animal &ref)
+WrongAnimal::WrongAnimal(const WrongAnimal &ref)
 {
     *this = ref;
-    std::cout<<"Animal Copy Constructor Called"<<std::endl;
+    std::cout<<"WrongAnimal Copy Constructor Called"<<std::endl;
     return;
 }
 
-Animal& Animal::operator=(const Animal &ref)
+WrongAnimal& WrongAnimal::operator=(const WrongAnimal &ref)
 {
     if(this != &ref)
         this->type = ref.type;
-    std::cout<<"Animal Assignement operator called"<<std::endl;
+    std::cout<<"WrongAnimal Assignement operator called"<<std::endl;
     return *this;
 }
 
-void Animal::makeSound() const
+void WrongAnimal::makeSound() const
 {
     std::cout<<"AAAAAA "<<getType()<<" is making some noise"<<std::endl;
 }
 
-std::string Animal::getType() const
+std::string WrongAnimal::getType() const
 {
     return type;
 }

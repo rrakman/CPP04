@@ -6,7 +6,7 @@
 /*   By: rrakman <rrakman@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 16:47:46 by rrakman           #+#    #+#             */
-/*   Updated: 2024/04/26 16:32:00 by rrakman          ###   ########.fr       */
+/*   Updated: 2024/04/27 17:06:22 by rrakman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Animal{
         Animal(std::string type);
         Animal(const Animal &ref);
         Animal& operator=(const Animal &ref);
-        ~Animal();
-        void makeSound() const;
-        std::string get_type() const;
+        virtual ~Animal();
+        virtual void makeSound() const;
+        std::string getType() const;
 };
