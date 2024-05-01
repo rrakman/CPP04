@@ -6,7 +6,7 @@
 /*   By: rrakman <rrakman@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 16:47:58 by rrakman           #+#    #+#             */
-/*   Updated: 2024/04/27 17:45:38 by rrakman          ###   ########.fr       */
+/*   Updated: 2024/05/01 16:07:34 by rrakman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 Dog::Dog() : Animal("Dog")
 {
     std::cout<<type<<" Constructed"<<std::endl;
+    this->brain = new Brain();
 }
 
 Dog::Dog(const Dog &ref)
@@ -34,6 +35,7 @@ Dog& Dog::operator=(const Dog &ref)
 
 Dog::~Dog()
 {
+    delete brain;
     std::cout<<type<< " Destructor called"<<std::endl;
 }
 
