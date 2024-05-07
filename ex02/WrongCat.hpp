@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrakman <rrakman@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/25 16:48:00 by rrakman           #+#    #+#             */
-/*   Updated: 2024/05/06 16:50:59 by rrakman          ###   ########.fr       */
+/*   Created: 2024/04/27 18:45:15 by rrakman           #+#    #+#             */
+/*   Updated: 2024/04/27 19:11:17 by rrakman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include"Animal.hpp"
-#include"Brain.hpp"
+#include"WrongAnimal.hpp"
 
-class Dog : public Animal
+class WrongCat : public WrongAnimal
 {
-    private:
-        Brain *brain;
     public:
-        Dog();
-        Dog(const Dog &ref);
-        Dog& operator=(const Dog &ref);
-        ~Dog();
-        void makeSound() const;
-        void printidea(int i);
+        WrongCat();
+        WrongCat(const WrongCat &ref);
+        WrongCat& operator=(const WrongCat &ref);
+        ~WrongCat();
 };
