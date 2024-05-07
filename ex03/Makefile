@@ -2,7 +2,7 @@ NAME = interface_and_recap
 CC = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -rf
-SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
+SRC = main.cpp AMateria.cpp ICharacter.cpp Cure.cpp Ice.cpp
 OBJ = ${SRC:%.cpp=%.o}
 
 $(NAME): $(OBJ)

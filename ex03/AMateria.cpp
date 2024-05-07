@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   AMateria.cpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: rrakman <rrakman@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/06 22:47:24 by rrakman           #+#    #+#             */
-/*   Updated: 2024/05/06 22:56:43 by rrakman          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include"AMateria.hpp"
 
 AMateria::AMateria() : type("default")
@@ -43,4 +31,9 @@ AMateria& AMateria::operator=(const AMateria &ref)
 std::string const &AMateria::getType() const
 {
     return this->type;
+}
+
+void AMateria::use(ICharacter &target)
+{
+    std::cout<<"* uses some materia on "<<target.getName()<<" *"<<std::endl;   
 }
