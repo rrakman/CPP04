@@ -1,10 +1,11 @@
 #include"AMateria.hpp"
 #include"ICharacter.hpp"
 #include"Cure.hpp"
-
+#include"Ice.hpp"
 int main()
 {
-    AMateria *cure = new Cure();
 
-    delete cure;
+    AMateria *ice = new Ice();
+    
+    delete ice;
 }
